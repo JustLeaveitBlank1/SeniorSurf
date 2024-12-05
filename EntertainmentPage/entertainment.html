@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorSurf - Entertainment</title>
+    <link rel="stylesheet" href="entertainment.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo-section">
+            <button class="hamburger-icon" onclick="toggleDropdown()">☰</button>
+            <div class="logo">SeniorSurf</div>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="../HomePage/homepage.html">Home</a></li>
+                    <li><a href="#" onclick="toggleAccessibilityPanel()">Accessibility</a></li>
+                    <li><a href="../NotesPage/notes.html">Notes</a></li>
+                    <li><a href="../HelpPage/help.html">Help</a></li>
+                </ul>
+            </div>            
+        </div>
+        <nav class="center-nav">
+            <ul class="nav-links">
+                <li><a href="../HomePage/homepage.html">Home</a></li>
+                <li><a href="../ProfilePage/profile.html">Profile</a></li>
+                <li><a href="../EntertainmentPage/entertainment.html">Entertainment</a></li>
+                <li><a href="../HelpPage/help.html">Help</a></li>
+            </ul>
+        </nav>        
+        </nav>
+        <div class="header-icons">
+            <button class="logout-btn" id="logout-btn" onclick="window.location.href='../LandingPage/landingpage.html'">Logout</button>
+        </div>
+    </header>
+     <!-- Accessibility Panel -->
+     <div id="accessibility-panel" class="accessibility-panel">
+        <h3>Accessibility Options</h3>
+        <label for="text-size">Text Size:</label>
+        <select id="text-size">
+            <option value="16px">Default</option>
+            <option value="18px">Medium</option>
+            <option value="20px">Large</option>
+            <option value="22px">Extra Large</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="contrast-toggle"> High Contrast
+        </label>
+
+        <label>
+            <input type="checkbox" id="magnifier-toggle"> Magnifier
+        </label>
+
+        <label>
+            <input type="checkbox" id="motion-toggle"> Reduce Motion
+        </label>
+
+        <button id="close-accessibility">Close Panel</button>
+    </div>
+
+   <!-- Main Content -->
+   <main class="main-content" id="main-content">
+    <!-- Games Section -->
+    <section id="games">
+        <h2>Games</h2>
+        <div class="container">
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/sudoku2.png" alt="Sudoku Game">
+                <div class="card-content">
+                    <h3>Sudoku</h3>
+                    <p>Complete number grids using logic and strategic thinking.</p>
+                    <a href="https://www.nytimes.com/crosswords" target="_blank" class="play-button" aria-label="Play Sudoku">Play Sudoku</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/crossword_yellow__1_.webp" alt="Crossword Puzzle">
+                <div class="card-content">
+                    <h3>Crossword</h3>
+                    <p>Solve challenging word clues to fill blank grids.</p>
+                    <a href="https://www.nytimes.com/crosswords" target="_blank" class="play-button" aria-label="Play Crossword">Play Crossword</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/84r7s87e.png" alt="Jigsaw Puzzle">
+                <div class="card-content">
+                    <h3>JigSaw</h3>
+                    <p>Fit puzzle pieces together to reveal the final picture.</p>
+                    <a href="https://www.jigsawplanet.com/" target="_blank" class="play-button" aria-label="Play JigSaw">Play JigSaw</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/DALL%C2%B7E%202024-10-14%2022.08.40%20-%20A%20simple%20and%20elegant%20solitaire%20game%20icon%20featuring%20a%20deck%20of%20playing%20cards%20with%20the%20ace%20of%20spades%20on%20top.%20The%20cards%20are%20fanned%20out%20slightly%20in%20front%20o.webp" alt="Solitaire Game">
+                <div class="card-content">
+                    <h3>Solitaire</h3>
+                    <p>Organize playing cards in sequence, requires focused patience.</p>
+                    <a href="https://solitaired.com/" target="_blank" class="play-button" aria-label="Play Solitaire">Play Solitaire</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music">
+        <h2>Music</h2>
+        <div class="container">
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/Country.webp" alt="Country Music">
+                <div class="card-content">
+                    <h3>Country</h3>
+                    <p>Heartfelt storytelling with twangy vocals and acoustic melodies.</p>
+                    <a href="https://open.spotify.com/playlist/37i9dQZF1DWVn8zvR5ROMB" target="_blank" class="play-button" aria-label="Play Country Music">Play Country</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/Classic%20rock.webp" alt="Classic Rock Music">
+                <div class="card-content">
+                    <h3>Classic Rock</h3>
+                    <p>Powerful guitar riffs and timeless, energetic anthems.</p>
+                    <a href="https://open.spotify.com/playlist/1ti3v0lLrJ4KhSTuxt4loZ" target="_blank" class="play-button" aria-label="Play Classic Rock">Play Rock</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/jazz.webp" alt="Jazz Music">
+                <div class="card-content">
+                    <h3>Jazz</h3>
+                    <p>Improvisational melodies blending rhythm, brass, and soul.</p>
+                    <a href="https://open.spotify.com/playlist/37i9dQZF1DXbITWG1ZJKYt" target="_blank" class="play-button" aria-label="Play Jazz Music">Play Jazz</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/classical.webp" alt="Classical Music">
+                <div class="card-content">
+                    <h3>Classical</h3>
+                    <p>Elegant orchestral compositions, expressing emotion and complexity.</p>
+                    <a href="https://open.spotify.com/playlist/37i9dQZF1DWVFeEut75IAL" target="_blank" class="play-button" aria-label="Play Classical Music">Play Classical</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <div class="container">
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/gardening.webp" alt="Gardening Tips">
+                <div class="card-content">
+                    <h3>Gardening Tips</h3>
+                    <p>Nurturing plants, creating beauty, and growing sustainably.</p>
+                    <a href="https://www.gardeningknowhow.com/" target="_blank" class="play-button" aria-label="Explore Gardening Tips">Play Gardening</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/Knitting.webp" alt="Knitting Resources">
+                <div class="card-content">
+                    <h3>Knitting Resources</h3>
+                    <p>Weaving yarn into warm, comforting, functional creations.</p>
+                    <a href="https://www.anniescatalog.com/knit/index.html" target="_blank" class="play-button" aria-label="Explore Knitting Resources">Play Knitting</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/pottery.webp" alt="Craft Tutorials">
+                <div class="card-content">
+                    <h3>Craft Tutorials</h3>
+                    <p>Creating handmade items with creativity, care, and precision.</p>
+                    <a href="https://www.craftsy.com/" target="_blank" class="play-button" aria-label="Explore Craft Tutorials">Play Craft</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://seniorsurf.neocities.org/Images/pickle%20ball%202.webp" alt="Pickleball Tips">
+                <div class="card-content">
+                    <h3>Pickleball Tips</h3>
+                    <p>Fast-paced paddle sport combining tennis and badminton.</p>
+                    <a href="https://usapickleball.org/pickleball-basics/tips-for-new-players/" target="_blank" class="play-button" aria-label="Explore Pickleball Tips">Play Pickleball</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Senior Surf. All Rights Reserved.</p>
+    </footer>
+
+    <script src="entertainment.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Add top margin to account for fixed navbar */
+main {
+    padding: 2rem;
+    margin-top: 70px; /* Adjust this value to match the height of your navbar */
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#search-bar {
+    width: 70%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-note-btn, #print-btn, #save-note, #clear-note {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-note-btn:hover, #print-btn:hover, #save-note:hover, #clear-note:hover {
+    background-color: #0056b3;
+}
+
+#notes-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Notes Section */
+.notepad-container {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+textarea#note-area {
+    width: 100%;
+    height: 200px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.note-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Chatbot Button */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chatbot-toggle button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chatbot-toggle button:hover {
+    background-color: #0056b3;
+}
+
+/* Chatbot Popup */
+.chatbot-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* Chatbot Header */
+.chatbot-popup .chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem;
+}
+
+.chatbot-popup .chatbot-header h2 {
+    margin: 0;
+}
+
+.chatbot-popup .chatbot-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Chatbot Body */
+.chatbot-popup .chatbot-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chat-window {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.chat-window div {
+    margin-bottom: 0.5rem;
+}
+
+.chatbot-popup input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 1rem);
+}
+
+.chatbot-popup button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chatbot-popup button:hover {
+    background-color: #0056b3;
+}
+
+/* Hidden Class for Popups */
+.hidden {
+    display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .chatbot-popup {
+        width: 90%;
+        bottom: 20px;
+        right: 5%;
+    }
+
+    #search-bar {
+        width: 60%;
+    }
+}
+
+/* Navbar CSS */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0D47A1;
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.hamburger-icon {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.hamburger-icon:hover {
+    color: #007bff;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.center-nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    padding: 10px 0;
+    width: 200px; /* Consistent width for dropdown */
+    z-index: 1001;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 12px 20px;
+    text-align: left; /* Ensure left-aligned text */
+}
+
+.dropdown-menu ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: normal;
+    transition: all 0.3s ease;
+    display: block; /* Ensures clickable area fills the row */
+    padding: 8px 15px; /* Add padding for better spacing */
+    border-radius: 5px; /* Add slight rounding for modern look */
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+    border-left: 3px solid #007bff; /* Keep consistent with original hover effect */
+}
+
+
+/* Logout Button */
+.logout-btn {
+    background-color: #d32f2f;
+    border: none;
+    padding: 8px 15px; /* Keep the padding */
+    color: #fff;
+    font-size: 1rem; /* Keep the font size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center;
+    margin-left: auto; /* Keeps alignment flexible */
+}
+
+/* Adjust the header actions container for spacing */
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Keep button aligned to the right */
+    margin-right: 40px; /* Add extra space to shift it left */
+}
+
+/* Hover effect */
+.logout-btn:hover {
+    background-color: #b71c1c;
+}
+/* Accessibility Panel CSS */
+.accessibility-panel {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 300px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    display: none;
+    z-index: 1001;
+}
+.accessibility-panel.open {
+    display: block;
+}
+
+
+

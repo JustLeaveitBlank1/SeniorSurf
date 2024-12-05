@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorSurf - Chatbot</title>
+    <link rel="stylesheet" href="../HomePage/homepage.css">
+    <link rel="stylesheet" href="../Accessibility/accessibility.css">
+
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Weather Section -->
+        <section class="modern-weather-container">
+            <div class="weather-widget">
+                <iframe
+                    src="https://embed.windy.com/embed2.html"
+                    frameborder="0"
+                    allowfullscreen="true"
+                    title="Weather Map"
+                ></iframe>
+            </div>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section class="chatbot-container">
+            <div class="chatbot-header">
+                <h3>Chat with SeniorSurf AI</h3>
+                <button class="chatbot-close-btn" title="Close Chat">✖</button>
+            </div>
+            <div class="chatbot-messages" id="chat-box">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chatbot-input-area">
+                <textarea id="user-input" placeholder="Type your message here..."></textarea>
+                <button id="send-btn">Send</button>
+            </div>
+        </section>   
+        
+         <!-- Social Links Section -->
+         <section class="social-links-container">
+            <div class="social-links">
+                <a href="https://www.youtube.com" target="_blank" class="social-link youtube">YouTube</a>
+                <a href="https://www.facebook.com" target="_blank" class="social-link facebook">Facebook</a>
+                <a href="https://www.twitter.com" target="_blank" class="social-link twitter">Twitter</a>
+                <a href="https://www.google.com" target="_blank" class="social-link google">Google</a>
+            </div>
+        </section>    
+    </main>
+
+    <!-- Home Page JS -->
+    <script src="../HomePage/homepage.js" defer></script>
+</body>
+</html>

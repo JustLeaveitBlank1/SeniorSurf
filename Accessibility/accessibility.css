@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Accessibility Panel Styles */
+.accessibility-panel {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #007bff;
+    display: none;
+    z-index: 1000;
+    color: #333;
+}
+
+.accessibility-panel.open {
+    display: block;
+}
+
+.accessibility-panel h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Accessibility Options */
+.accessibility-option {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.accessibility-option label {
+    flex: 1;
+    color: #333;
+}
+
+.accessibility-option select {
+    flex: 1;
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Highlight for Readable Sections */
+.readable.highlight {
+    background-color: rgba(0, 123, 255, 0.2);
+    border: 2px solid #007bff;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Toggle Button */
+.accessibility-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accessibility-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Close Button */
+.close-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #0056b3;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Reduce Motion */
+.reduced-motion * {
+    transition: none !important;
+}
+
+/* Text-to-Speech Buttons */
+.accessibility-option button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.accessibility-option button:hover {
+    background-color: #0056b3;
+}
+
+#stop-tts-button {
+    background-color: #d32f2f; /* Red for Stop */
+}
+
+#stop-tts-button:hover {
+    background-color: #a40000;
+}
+
+/* Tooltips for Buttons */
+.accessibility-option button:focus::after,
+.accessibility-option button:hover::after {
+    content: attr(aria-label);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Panel Design */
+@media (max-width: 600px) {
+    .accessibility-panel {
+        top: 5%;
+        right: 5%;
+        width: 90%;
+    }
+}
+/* Highlight each word as it is spoken */
+.word-highlight {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 0 2px;
+    display: inline-block;
+}
+

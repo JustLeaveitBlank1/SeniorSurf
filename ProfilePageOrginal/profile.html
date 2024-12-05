@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorSurf - Home</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="../AccessibilityPage/accessibility.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo-section">
+            <button class="hamburger-icon" id="dropdown-toggle">☰</button>
+            <div class="logo">SeniorSurf</div>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <ul>
+                    <li><a href="../HomePage/homepage.html">Home</a></li>
+                    <li><a href="#" id="accessibility-toggle">Accessibility</a></li>
+                    <li><a href="../NotesPage/notes.html">Notes</a></li>
+                    <li><a href="../HelpPage/help.html">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="center-nav">
+            <ul class="nav-links">
+                <li><a href="../HomePage/homepage.html">Home</a></li>
+                <li><a href="../ProfilePage/profile.html" class="active" >Profile</a></li>
+                <li><a href="../EntertainmentPage/entertainment.html">Entertainment</a></li>
+                <li><a href="../HelpPage/help.html">Help</a></li>
+            </ul>
+        </nav>      
+        <div class="header-actions">
+            <button class="action-btn logout-btn" onclick="window.location.href='../LandingPage/landingpage.html'">Logout</button>
+        </div>
+    </header>
+
+    <!-- Accessibility Panel -->
+    <div id="accessibility-panel" class="accessibility-panel">
+        <h3>Accessibility Options</h3>
+        <label for="text-size">Text Size:</label>
+        <select id="text-size">
+            <option value="16px">Default</option>
+            <option value="18px">Medium</option>
+            <option value="20px">Large</option>
+            <option value="22px">Extra Large</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="contrast-toggle"> High Contrast
+        </label>
+
+        <label>
+            <input type="checkbox" id="magnifier-toggle"> Magnifier
+        </label>
+
+        <label>
+            <input type="checkbox" id="motion-toggle"> Reduce Motion
+        </label>
+
+        <button id="close-accessibility">Close Panel</button>
+    </div>
+
+    <script src="profile.js" defer></script>
+    <script src="../AccessibilityPage/accessibility.js" defer></script>
+</body>
+</html>

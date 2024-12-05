@@ -1,0 +1,82 @@
+<div class="accessibility-panel" id="accessibility-panel" aria-labelledby="accessibility-title">
+    <h3 id="accessibility-title">Accessibility Options</h3>
+
+    <!-- Background Color -->
+    <div class="accessibility-option">
+        <label for="background-color">Background:</label>
+        <select id="background-color" aria-label="Choose background color">
+            <option value="white">White</option>
+            <option value="lightgray">Light Gray</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="lightyellow">Light Yellow</option>
+            <option value="sepia">Sepia</option>
+            <option value="darkblue">Dark Blue</option>
+            <option value="darkyellow">Dark Yellow</option>
+            <option value="woodgrain">Wood Grain</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <!-- Font Family -->
+    <div class="accessibility-option">
+        <label for="font-family">Font Family:</label>
+        <select id="font-family" aria-label="Choose font family">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="'Times New Roman', serif">Times New Roman</option>
+            <option value="'Courier New', monospace">Courier New</option>
+            <option value="'Palatino Linotype', serif">Palatino Linotype</option>
+            <option value="'Bookerly', serif">Bookerly</option>
+            <option value="'Minion', serif">Minion</option>
+            <option value="'Segoe UI', sans-serif">Segoe UI</option>
+            <option value="'Roboto', sans-serif">Roboto</option>
+            <option value="'Roboto Condensed', sans-serif">Roboto Condensed</option>
+            <option value="'Patrick Hand', cursive">Patrick Hand</option>
+            <option value="'Noticia Text', serif">Noticia Text</option>
+            <option value="'Verdana', sans-serif">Verdana</option>
+            <option value="'Tahoma', sans-serif">Tahoma</option>
+        </select>
+    </div>
+
+    <!-- Font Size -->
+    <div class="accessibility-option">
+        <label for="font-size">Font Size:</label>
+        <select id="font-size" aria-label="Adjust font size">
+            <option value="16px">16</option>
+            <option value="18px">18</option>
+            <option value="20px">20</option>
+            <option value="22px">22</option>
+            <option value="24px">24</option>
+            <option value="26px">26</option>
+            <option value="28px">28</option>
+            <option value="30px">30</option>
+            <option value="32px">32</option>
+            <option value="34px">34</option>
+            <option value="36px">36</option>
+            <option value="38px">38</option>
+            <option value="40px">40</option>
+        </select>
+    </div>
+
+    <!-- Line Height -->
+    <div class="accessibility-option">
+        <label for="line-height">Line Height:</label>
+        <select id="line-height" aria-label="Adjust line height">
+            <option value="140%">140%</option>
+            <option value="160%" selected>160%</option>
+            <option value="180%">180%</option>
+            <option value="200%">200%</option>
+        </select>
+    </div>
+
+    <!-- Text-to-Speech -->
+    <div class="accessibility-option">
+        <label for="tts-button">Text-to-Speech:</label>
+        <button id="tts-button" aria-label="Start reading content aloud">Read Aloud</button>
+        <button id="stop-tts-button" aria-label="Stop reading content" style="display: none;">Stop</button>
+    </div>
+
+    <button id="close-accessibility" class="close-btn" aria-label="Close accessibility panel">Close</button>
+</div>
+<button class="accessibility-toggle" id="toggle-accessibility" aria-label="Open accessibility options">
+    <i class="fas fa-universal-access" aria-hidden="true"></i>
+</button>

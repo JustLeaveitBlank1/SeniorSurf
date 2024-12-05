@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Bar Test</title>
+    <link rel="stylesheet" href="signup.css">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <form id="signupForm">
+        <h1>Signup</h1>
+
+        <!-- Username Field -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <small id="usernameFeedback" class="feedback"></small>
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Enter your password" oninput="checkPasswordStrength()">
+            <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility('password', this)"></i>
+        </div>
+        <div class="strength-bar">
+            <div class="strength-meter"></div>
+        </div>
+
+        <!-- Confirm Password Field -->
+        <label for="confirmPassword">Confirm Password:</label>
+        <div class="password-container">
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+            <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility('confirmPassword', this)"></i>
+        </div>
+        <small id="confirmPasswordFeedback" class="feedback"></small>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <small id="emailFeedback" class="feedback"></small>
+
+        <!-- Date of Birth Field -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <!-- Signup Button -->
+        <button type="button" onclick="validateAndSave()">Sign Up</button>
+        <p>Already have an account? <a href="login.html" style="color: #007bff; text-decoration: none;">Login here</a></p>
+    </form>
+    <script src="signup.js"></script>
+</body>
+</html>

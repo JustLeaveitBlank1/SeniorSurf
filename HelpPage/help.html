@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorSurf - Help</title>
+    <link rel="stylesheet" href="help.css">
+    <link rel="stylesheet" href="../Accessibility/accessibility.css">
+
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Accessibility Panel Placeholder -->
+    <div id="accessibility-panel" class="accessibility-panel"></div>
+    
+    <div class="hero-section">
+        <h1>How can we help?</h1>
+        <p>Search for topics, guides, or documentation to find what you need.</p>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search Help Topics...">
+            <button id="search-btn">Search</button>
+        </div>
+    </div>
+        <section class="help-topics">
+            <h2>Help Desk</h2>
+            <div class="topics-container">
+                <div class="topic-card">
+                    <h3>Getting Started</h3>
+                    <p>Learn how to set up and use SeniorSurf in just a few steps.</p>
+                    <a href="#">8 Articles</a>
+                </div>
+                <div class="topic-card">
+                    <h3>Account Management</h3>
+                    <p>Manage your account settings, privacy options, and subscriptions.</p>
+                    <a href="#">10 Articles</a>
+                </div>
+                <div class="topic-card">
+                    <h3>Technical Support</h3>
+                    <p>Find solutions for common technical problems and troubleshooting tips.</p>
+                    <a href="#">15 Articles</a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Us Button -->
+<button id="contact-us-btn" class="contact-us-btn">Contact Us</button>
+
+<!-- Contact Us Modal -->
+<div id="contact-modal" class="contact-modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close-modal">&times;</span>
+        <h2>Send a Message</h2>
+        <p>We're here to help. Please fill out the form below.</p>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </div>
+</div>
+
+    </main>
+    
+
+    <!-- Help Page JS -->
+    <script src="../HelpPage/help.js" defer></script>
+
+    <!-- Load Navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load Navbar
+            fetch("../navbar/navbar.html")
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error("Failed to load navbar.");
+                    }
+                    return response.text();
+                })
+                .then((html) => {
+                    document.getElementById("navbar-placeholder").innerHTML = html;
+                })
+                .catch((error) => console.error("Error loading navbar:", error));
+        });
+    </script>
+</body>
+</html>

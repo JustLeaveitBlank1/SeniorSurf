@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <form id="loginForm">
+            <h1>Login</h1>
+
+            <!-- Username Field -->
+            <label for="username">Username:</label>
+            <input type="text" id="loginUsername" name="username" placeholder="Enter your username" required>
+
+            <!-- Password Field -->
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+                <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility('loginPassword', this)"></i>
+            </div>
+
+            <div class="remember-me">
+                <label>
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    Remember me
+                </label>
+            </div>
+            
+            <!-- Login Button -->
+            <button type="button" onclick="validateLogin()">Log In</button>
+
+            <!-- Forgot Password & Sign Up -->
+            <div class="links">
+                <a href="forgot-password.html">Forgot password?</a>
+                <a href="signup.html">Sign up</a>
+            </div>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

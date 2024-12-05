@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SeniorSurf - Notes</title>
+  <link rel="stylesheet" href="notes.css">
+  <link rel="stylesheet" href="../Accessibility/accessibility.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo-section">
+      <button class="hamburger-icon" id="dropdown-toggle">☰</button>
+      <div class="logo">SeniorSurf</div>
+      <div class="dropdown-menu" id="dropdown-menu">
+        <ul>
+          <li><a href="../HomePage/homepage.html">Home</a></li>
+          <li><a href="#" id="accessibility-toggle">Accessibility</a></li>
+          <li><a href="#notes">Notes</a></li>
+          <li><a href="../HelpPage/help.html">Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class="center-nav">
+      <ul class="nav-links">
+        <li><a href="../HomePage/homepage.html" class="active">Home</a></li>
+        <li><a href="../ProfilePage/profile.html">Profile</a></li>
+        <li><a href="../EntertainmentPage/entertainment.html">Entertainment</a></li>
+        <li><a href="../HelpPage/help.html">Help</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="logout-btn" onclick="window.location.href='../LandingPage/landingpage.html'">Logout</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="notepad-container">
+      <textarea id="note-area" placeholder="Start typing your notes here..."></textarea>
+      <div class="note-buttons">
+        <button id="save-note">Save</button>
+        <button id="clear-note">Clear</button>
+        <button id="print-note">Print</button>
+      </div>
+    </div>
+    <div class="controls">
+      <input type="text" id="search-bar" placeholder="Search notes...">
+      <button id="add-note-btn">Add New Note</button>
+    </div>
+    <div id="notes-list"></div>
+  </main>
+
+  <!-- Chatbot -->
+  <div id="chatbot-popup" class="chatbot-popup hidden">
+    <div class="chatbot-header">
+      <h2>Chat with ChatGPT</h2>
+      <button id="close-chatbot">&times;</button>
+    </div>
+    <div class="chatbot-body">
+      <div id="chat-box" class="chat-window"></div>
+      <input type="text" id="user-input" placeholder="Ask a question...">
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+  <div class="chatbot-toggle">
+    <button id="chatbot-btn">Chat</button>
+  </div>
+
+  <!-- Accessibility Panel Placeholder -->
+  <div id="accessibility-panel-container"></div>
+
+  <script src="notes.js"></script>
+  <script src="../Accessibility/accessibility.js"></script>
+</body>
+</html>

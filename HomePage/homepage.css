@@ -1,0 +1,457 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0D47A1;
+    color: #fff;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hamburger-icon {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.hamburger-icon:hover {
+    color: #007bff;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.center-nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    padding: 10px 0;
+    width: 200px;
+    z-index: 1001;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 12px 20px;
+}
+
+.dropdown-menu ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+    border-left: 3px solid #007bff;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #d32f2f;
+    border: none;
+    padding: 8px 15px;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .logo-section {
+        gap: 10px;
+    }
+
+    .nav-links {
+        display: none; /* Hide on smaller screens */
+    }
+}
+/* Accessibility Panel CSS */
+.accessibility-panel {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 300px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    display: none;
+    z-index: 1001;
+}
+.accessibility-panel.open {
+    display: block;
+}
+/* Weather Section */
+.weather-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.weather-header h2 {
+    font-size: 2rem;
+    color: #0D47A1;
+    margin-bottom: 5px;
+}
+
+.weather-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.weather-widget {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #0D47A1;
+}
+
+.weather-widget iframe {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+/* Modern Weather Container */
+.modern-weather-container {
+    position: absolute; /* Position it absolutely */
+    top: 6rem; /* Adds space below the navbar */
+    left: 1rem; /* Aligns it to the left side with spacing */
+    width: 45%; /* Reduce width to leave space for the chatbot */
+    text-align: center;
+    background: #ffffff; /* White background for clarity */
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 1rem; /* Add spacing inside the container */
+}
+
+/* Weather Widget Styling */
+.weather-widget {
+    overflow: hidden; /* Prevent any overflow */
+    border-radius: 10px; /* Smooth edges around the widget */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow around the widget */
+    background: #f9f9f9; /* Light background for contrast */
+    position: relative; /* To handle iframe adjustments */
+    height: 300px; /* Keep the reduced height */
+}
+
+.weather-widget iframe {
+    width: 100%; /* Ensure it spans the entire container */
+    height: 100%; /* Take up the full height */
+    border: none; /* Remove border for a clean look */
+    border-radius: 10px; /* Match the container's border-radius */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modern-weather-container {
+        width: 90%; /* Use more width on smaller screens */
+        left: 5%; /* Center align for smaller devices */
+        top: 8rem; /* Adjust for navbar height */
+    }
+
+    .weather-widget {
+        height: 200px; /* Reduce height further for smaller screens */
+    }
+}
+/* Chatbot Container */
+.chatbot-container {
+    position: absolute; /* Align similar to the weather widget */
+    top: 6rem; /* Matches the weather widget alignment */
+    right: 1rem; /* Align to the right with spacing */
+    width: 45%; /* Matches the width of the weather widget */
+    height: 330px; /* Fixed height to match the weather widget */
+    text-align: center;
+    background: #ffffff; /* White background for clarity */
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 1rem; /* Add spacing inside the container */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent any overflow */
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    background-color: #0D47A1; /* Matches the navbar and weather widget */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 1.2rem;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.chatbot-close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.chatbot-close-btn:hover {
+    color: #ff4d4d;
+}
+
+/* Messages Container */
+.chatbot-messages {
+    flex-grow: 1; /* Fill available space */
+    padding: 1rem;
+    overflow-y: auto; /* Enables scrolling for long conversations */
+    background-color: #f9f9f9; /* Matches the weather widget’s light background */
+    border-radius: 10px; /* Smooth edges */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow around messages */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #d6d6d6 #f9f9f9; /* Custom scrollbar colors */
+    max-height: calc(300px - 130px); /* Adjust height dynamically to match the weather widget */
+}
+
+/* Custom Scrollbar for Webkit Browsers */
+.chatbot-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+    background: #d6d6d6;
+    border-radius: 5px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+    background: #bcbcbc;
+}
+
+.chat-message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* User Message Styling */
+.user-message {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    text-align: left;
+    border: 1px solid #bee5eb;
+}
+
+/* AI Message Styling */
+.ai-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    text-align: left;
+    border: 1px solid #f5c6cb;
+}
+
+/* Error Message Styling */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-style: italic;
+    text-align: left;
+    border: 1px solid #f5c6cb;
+}
+
+/* Input Area */
+.chatbot-input-area {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    gap: 10px;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.chatbot-input-area textarea {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    height: 40px; /* Match input size to the overall layout */
+}
+
+.chatbot-input-area button {
+    background-color: #0D47A1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-input-area button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chatbot-container {
+        width: 90%; /* Use more width on smaller screens */
+        right: 5%; /* Center align for smaller devices */
+        top: 8rem; /* Adjust for navbar height */
+        height: auto; /* Allow auto height for smaller devices */
+    }
+
+    .chatbot-messages {
+        max-height: 200px; /* Adjust for smaller screens */
+    }
+}
+/* Social Links Container */
+.social-links-container {
+    position: absolute;
+    top: calc(50% + 100px); /* Adjusted to move down by 20px */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for true center alignment */
+    text-align: center;
+    z-index: 10;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 60px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.youtube {
+    background-color: #ff0000;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.google {
+    background-color: #34a853;
+}

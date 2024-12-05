@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorSurf - Landing Page</title>
+    <link rel="stylesheet" href="landingpage.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">SeniorSurf</div>
+        <button class="menu-toggle">☰</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#help">Help</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="action-btn login-btn" onclick="window.location.href='../SignUpAndLogin/login.html'">Login</button>
+            <button class="action-btn signup-btn" onclick="window.location.href='../SignUpAndLogin/signup.html'">Signup</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Lightbox with Project Titles</h1>
+                <p>A Gallery Portfolio</p>
+                <a href="../SignUpAndLogin/signup.html" class="cta-btn">Get Started for Free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Why SeniorSurf?</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <img src="../ImagesPage/Notes.jpg" alt="Store Management" class="feature-icon">
+                <h3>Notes</h3>
+                <p>Manage multiple Notes and images.</p>
+            </div> 
+            <div class="feature-card">
+                <img src="../ImagesPage/Friends1.jpg" alt="Real-Time Tracking" class="feature-icon">
+                <h3>Friends</h3>
+                <p>Stay connected with friends and family.</p>
+            </div>
+            <div class="feature-card">
+                <img src="../ImagesPage/Entertainment.png" alt="Insightful Reports" class="feature-icon">
+                <h3>Entertainment</h3>
+                <p>Games, weather, and daily trends to keep you up to date.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section id="help" class="help-section">
+        <h2>Need Help?</h2>
+        <p>If you have any questions or need support, we’re here to assist you.</p>
+        <div class="help-options">
+            <div class="help-card">
+                <h3>FAQ</h3>
+                <p>Find answers to common questions.</p>
+                <a href="faq.html" class="cta-btn">View FAQs</a>
+            </div>
+            <div class="help-card">
+                <h3>Contact Us</h3>
+                <p>Reach out for personalized support.</p>
+                <a href="contact.html" class="cta-btn">Contact Support</a>
+            </div>
+            <div class="help-card">
+                <h3>Live Chat</h3>
+                <p>Chat with our support team in real time.</p>
+                <a href="#" class="cta-btn">Start Chat</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="#help">Help Center</a>
+        </div>
+        <p>&copy; 2024 SeniorSurf. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="landingpage.js"></script>
+</body>
+</html>
